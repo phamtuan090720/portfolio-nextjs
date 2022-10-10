@@ -1,0 +1,25 @@
+@import '@styles/variable';
+
+.container {
+    .greeting {
+        line-height: 24px;
+        font-size: $fs-body-text;
+        font-weight: $fw-normal;
+        color: $secondary-4;
+    }
+
+    .name {
+        font-weight: 400;
+        line-height: 81px;
+        font-size: $fs-heading;
+        color: $secondary-4;
+    }
+
+    .position {
+        font-size: $fs-sub-heading;
+        line-height: 42px;
+        color: $secondary-3;
+        font-weight: $fw-normal;
+        margin-bottom: 80px;
+    }
+}

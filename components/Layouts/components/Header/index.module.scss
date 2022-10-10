@@ -1,0 +1,36 @@
+@import '@styles/variable';
+
+.header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $line;
+
+    .header__logo {
+        color: $secondary-1;
+        line-height: 21px;
+        font-weight: $fw-normal;
+        font-size: $fs-label;
+        width: 200px;
+        padding-left: 22px;
+        height: 100%;
+        display: flex;
+
+        a {
+            text-decoration: none;
+
+            &:focus-visible {
+                color: $secondary-1;
+                outline: none;
+            }
+
+            &:visited {
+                color: $secondary-1;
+            }
+        }
+
+    }
+
+    .header__nav {
+        width: calc(100% - 200px);
+    }
+}

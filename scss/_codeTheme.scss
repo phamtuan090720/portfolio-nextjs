@@ -1,0 +1,33 @@
+@import './variable';
+
+.comment {
+    color: $secondary-1;
+    font-weight: $fw-normal;
+    line-height: 21px;
+    font-size: $fs-label;
+    margin-bottom: 10px;
+}
+
+.const {
+    color: $secondary-3;
+}
+
+.name {
+    color: $secondary-5;
+}
+
+.isEqualTo {
+    color: $secondary-4;
+}
+
+.value {
+    color: $accent-3;
+}
+
+.code__line {
+    margin-bottom: 10px;
+}
+
+.text {
+    color: $secondary-4;
+}
