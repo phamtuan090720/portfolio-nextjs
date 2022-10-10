@@ -1,0 +1,26 @@
+@import '@styles/variable';
+.wrap {
+    width: 510px;
+    min-height: 475px;
+    padding: 16px;
+    background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%);
+    border: 1px solid #0C1616;
+    backdrop-filter: blur(32px);
+    border-radius: 8px;
+    
+    position: relative;
+}
+
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px auto;
+}
+
+.skills {
+    color: $secondary-3;
+}

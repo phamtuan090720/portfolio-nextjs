@@ -1,0 +1,79 @@
+@import '@styles/variable';
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $line;
+    .footer__text {
+        color: $secondary-1;
+        line-height: 21px;
+        font-size: $fs-label;
+        font-weight: $fw-normal;
+    }
+
+    .footer__left {
+        display: flex;
+        align-items: center;
+        border-right: 1px solid $line;
+
+
+        .left__item:nth-child(2) {
+            border-right: 1px solid $line;
+            border-left: 1px solid $line;
+        }
+
+        .left__item:nth-child(1) {
+            border: unset;
+            padding: 0 25px;
+        }
+    }
+
+    .footer__social {
+        cursor: pointer;
+    }
+
+    .footer__github {
+        display: flex;
+        cursor: pointer;
+
+        .github__icon {
+            margin-left: 10px;
+        }
+    }
+
+    .footer__social {
+        display: flex;
+
+        .social__item {
+            padding: 14px;
+            transition: all 0.3;
+            opacity: 0.7;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+    }
+
+    .email__icon {
+        fill: $secondary-1;
+    }
+
+    .footer__right {
+        display: flex;
+        align-items: center;
+        border-left: 1px solid $line;
+
+        .footer__github {
+            padding: 0 25px;
+            opacity: 0.7;
+            transition: all 0.3s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+}
