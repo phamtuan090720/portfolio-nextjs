@@ -1,0 +1,11 @@
+@import '@styles/variable';
+
+.nav-link {
+    text-decoration: none;
+    &:visited {
+        color: $secondary-1;
+    }
+    &.active {
+        color: #FFFFFF;
+    }
+}
