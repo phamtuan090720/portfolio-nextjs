@@ -1,14 +1,21 @@
 import React from "react";
+import { hashClass } from "utils";
 import Styles from "./index.module.scss";
 type TagProps = {
-  text: string;
+  children: React.ReactNode;
+  className?: string;
 };
 
-const Tag = ({ text = "" }: TagProps) => {
+const Tag = ({ children = "", className = "" }: TagProps) => {
   return (
-    <a href="#" className={Styles["tag"]}>
-      {text}
-    </a>
+    <span
+      onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        e.preventDefault();
+      }}
+      className={hashClass([className, Styles["tag"]])}
+    >
+      {children}
+    </span>
   );
 };
 

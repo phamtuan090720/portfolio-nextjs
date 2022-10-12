@@ -1,7 +1,6 @@
 @import '@styles/variable';
 
 .tag {
-    text-decoration: none;
     display: inline-block;
     border-radius: 3px;
     padding: .2em .5em .3em;
@@ -11,6 +10,7 @@
     border: 1px solid transparent;
 	border-radius: 2px;
     color: white;
+    cursor: pointer;
     &:hover {
         opacity: 0.7;
     }

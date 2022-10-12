@@ -10,7 +10,7 @@
         line-height: 21px;
         font-weight: $fw-normal;
         font-size: $fs-label;
-        width: 300px;
+        width: 200px;
         padding-left: 22px;
         height: 100%;
         display: flex;
@@ -31,6 +31,6 @@
     }
 
     .header__nav {
-        width: calc(100% - 300px);
+        width: calc(100% - 200px);
     }
 }

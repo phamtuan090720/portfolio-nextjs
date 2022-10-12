@@ -2,15 +2,19 @@ import React from "react";
 import Style from "./index.module.scss";
 import { hashClass, openNewTab } from "utils";
 import CodeLine from "components/CodeLine";
-type InformationComponentProps = {};
+import { Information as InformationType } from "types";
 
-const InformationComponent = (props: InformationComponentProps) => {
+type InformationComponentProps = {
+  information: InformationType;
+};
+
+const InformationComponent = ({ information }: InformationComponentProps) => {
   return (
     <div className={hashClass([Style["container"]])}>
       <div className={hashClass([Style["greeting"]])}>Hi all. I am</div>
-      <div className={hashClass([Style["name"]])}>Pham Tuan</div>
+      <div className={hashClass([Style["name"]])}>{information.fullName}</div>
       <div className={hashClass([Style["position"]])}>
-        &gt; Front-end developer
+        &gt; {information.position}
       </div>
       <div className={hashClass([Style["comment"], "comment"])}>
         {` // you can also see it on my Github page`}

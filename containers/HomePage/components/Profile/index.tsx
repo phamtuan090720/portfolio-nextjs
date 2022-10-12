@@ -4,31 +4,39 @@ import Avatar from "assets/img/avatar.jpg";
 import Image from "next/image";
 import CodeLine from "components/CodeLine";
 import Tag from "components/Tag";
+import { Information as InformationType } from "types";
 
-type ProfileProps = {};
+type ProfileProps = {
+  information: InformationType;
+};
 
-const Profile = (props: ProfileProps) => {
+const renderTag = (tags: string[]) => {
+  return tags.map((item: string, index) => {
+    return <Tag key={index}>{item}</Tag>
+  });
+};
+
+const Profile = ({ information }: ProfileProps) => {
   return (
     <div className={Style["wrap"]}>
       <div className={Style["avatar"]}>
         <Image src={Avatar} alt="avatar" />
       </div>
       <div className={Style["information"]}>
-        <CodeLine name="fullName" value="Pham Tuan" />
-        <CodeLine name="phone" value="+84363902003" />
-        <CodeLine name="mail" value="phamtuandev0907@gmail.com" />
-        <CodeLine name="dateOfBirth" value="July 9, 2000" />
+        <CodeLine name="phone" value={information?.phone} />
+        <CodeLine name="email" value={information?.email} />
+        <CodeLine
+          name="dateOfBirth"
+          value={new Date(information?.dateOfBirth)
+            .toDateString()
+            .split(" ")
+            .slice(1)
+            .join(" ")}
+        />
       </div>
       <div className={Style["skills"]}>
         <div className={Style["title"]}>skills:</div>
-        <Tag text="Front End Development" />
-        <Tag text="Javascript" />
-        <Tag text="ReactJs" />
-        <Tag text="NextJs" />
-        <Tag text="SQL" />
-        <Tag text="NodeJs" />
-        <Tag text="HTML" />
-        <Tag text="CSS" />
+        {renderTag(information?.skills || [])}
       </div>
     </div>
   );

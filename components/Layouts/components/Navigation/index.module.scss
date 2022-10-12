@@ -49,10 +49,13 @@
             }
         }
     }
+
     .nav__right {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
         .nav__item:last-child {
             border-right: none;
         }
     }
-  
 }
