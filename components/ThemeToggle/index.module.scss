@@ -59,8 +59,8 @@ $height : 40px;
 
 .toggle .icons svg {
     fill: #333333;
-    height: 24px;
-    width: 24px;
+    height: calc($height*2/3);
+    width: calc($height*2/3);
     z-index: 0;
 }
 
