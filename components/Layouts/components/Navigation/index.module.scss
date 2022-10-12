@@ -1,5 +1,4 @@
 @import '@styles/variable';
-
 .nav {
     display: flex;
     justify-content: space-between;
@@ -30,7 +29,6 @@
             position: relative;
             transition: all 0.3s;
             color: $secondary-1;
-
             &.nav__link::after {
                 content: "";
                 position: absolute;
@@ -60,5 +58,4 @@
             border-right: none;
         }
     }
-
 }

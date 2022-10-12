@@ -1,4 +1,3 @@
-import ThemeToggle from "components/ThemeToggle";
 import React from "react";
 import Navigation from "../Navigation";
 import Style from "./index.module.scss";
